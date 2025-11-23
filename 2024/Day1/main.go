@@ -58,13 +58,30 @@ func main() {
 	sort.Ints(secondnumbers)
 
 	//Determine Answer
-	var answer float64
+	var answer1 float64
 	for n := 0; n < len(firstnumbers); n++ {
-		answer += math.Abs(float64(firstnumbers[n]) - float64(secondnumbers[n]))
+		answer1 += math.Abs(float64(firstnumbers[n]) - float64(secondnumbers[n]))
 	}
 
 	// Report Results
-	finishtime := time.Now()
-	fmt.Println("Finished in", finishtime.Sub(starttime))
-	fmt.Println("Answer:", answer)
+	fmt.Println("Finished Part 1 in", time.Now().Sub(starttime))
+	fmt.Printf("Part 1 Answer: %.0f\n", answer1)
+
+	// Part 2
+	var answer2 int
+	for _, firstnumber := range firstnumbers {
+		n := 0
+		for _, secondnumber := range secondnumbers {
+			if firstnumber == secondnumber {
+				n++
+			}
+
+		}
+		answer2 += firstnumber * n
+	}
+
+	// Report Results
+	fmt.Println("Finished Part 2 in", time.Now().Sub(starttime))
+	fmt.Printf("Part 2 Answer: %d\n", answer2)
+
 }
