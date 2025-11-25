@@ -85,9 +85,36 @@ func main() {
 		}
 
 	}
-
 	// Output Answer
 	fmt.Println("Finished Part 1 in", time.Since(starttime))
 	fmt.Printf("Part 1 Answer: %d\n", answer1)
+
+	/////////////////////////// Part 2 ///////////////////////////
+	answer2 := 0
+	starttime = time.Now()
+
+	for _, line := range lines {
+		strings := strings.Split(line, " ") // Split Line Into Array
+		numbers := stringstonumbers(strings)
+
+		safereport := false // Start With False State Until Proved True
+
+		for n := range len(numbers) {
+			newarray := make([]int, 0, len(numbers)-1)
+			newarray = append(newarray, numbers[:n]...)   // Create New Array Without One Element
+			newarray = append(newarray, numbers[n+1:]...) // Create New Array Without One Element
+			//fmt.Println(newarray)
+			if issafereport(newarray) {
+				safereport = true
+			}
+
+		}
+
+		if safereport {
+			answer2 += 1
+		}
+	}
+	fmt.Println("Finished Part 2 in", time.Since(starttime))
+	fmt.Printf("Part 2 Answer: %d\n", answer2)
 
 }
