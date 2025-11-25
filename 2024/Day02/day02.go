@@ -1,4 +1,4 @@
-package main
+package day02
 
 import (
 	"bufio"
@@ -65,14 +65,14 @@ func issafereport(numbers []int) bool { // Review Report Using AOC Rules
 	}
 }
 
-func main() {
+func Run() {
 	// Starting Day 2
 	fmt.Println("Starting Day 2")
 	answer1 := 0
 	starttime := time.Now()
 
 	// Read Input Into Lines
-	path := "puzzleinput.txt"
+	path := "Day02/puzzleinput.txt"
 	lines := inputtolines(path)
 
 	// Process Line One at a Time
@@ -114,7 +114,7 @@ func main() {
 			answer2 += 1
 		}
 	}
-	fmt.Println("Finished Part 2 in", time.Since(starttime))
+	fmt.Println("\nFinished Part 2 in", time.Since(starttime))
 	fmt.Printf("Part 2 Answer: %d\n", answer2)
 
 }

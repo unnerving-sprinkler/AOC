@@ -1,4 +1,4 @@
-package main
+package day01
 
 import (
 	"bufio"
@@ -36,12 +36,12 @@ func linetoints(line string) (int, int) {
 
 }
 
-func main() {
+func Run() {
 	fmt.Println("Starting Day 1")
 	starttime := time.Now()
 
 	// Open File Read To Stringgs
-	path := "puzzleinput.txt"
+	path := "Day01/puzzleinput.txt"
 	lines := inputtolines(path)
 
 	// Create a Place To Store int values and seperate numbers from the string
@@ -81,7 +81,7 @@ func main() {
 	}
 
 	// Report Results
-	fmt.Println("Finished Part 2 in", time.Now().Sub(starttime))
+	fmt.Println("\nFinished Part 2 in", time.Since(starttime))
 	fmt.Printf("Part 2 Answer: %d\n", answer2)
 
 }

@@ -1,4 +1,4 @@
-package main
+package day03
 
 import (
 	"bufio"
@@ -28,13 +28,13 @@ func inputtolines(path string) []string { // Read Input File Into Lines
 	return lines
 }
 
-func main() {
+func Run() {
 	fmt.Println("Starting Day 3")
 	starttime := time.Now()
 	answer1 := 0
 
 	// Read Input File
-	lines := inputtolines("puzzleinput.txt")
+	lines := inputtolines("Day03/puzzleinput.txt")
 
 	// Find All Expressions That Match Format and Add a Array Of Strings
 	var matchingexpressions []string
@@ -52,7 +52,7 @@ func main() {
 		answer1 += number1 * number2
 	}
 
-	fmt.Println("Finished Day 3 in", time.Since(starttime))
+	fmt.Println("Finished 3A in", time.Since(starttime))
 	fmt.Printf("Part 1 Answer: %d\n", answer1)
 
 	/////////////////////////// Part 2 ///////////////////////////
@@ -83,7 +83,7 @@ func main() {
 		}
 	}
 
-	fmt.Println("Finished Part 2 in", time.Since(starttime))
+	fmt.Println("\nFinished 3B in", time.Since(starttime))
 	fmt.Printf("Part 2 Answer: %d\n", answer2)
 
 }
