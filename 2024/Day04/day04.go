@@ -56,11 +56,26 @@ func Run() {
 	for _, line := range lines { // Create a 2D Array From Input
 		grid = append(grid, strings.Split(line, ""))
 	}
-
 	normaldirection := savegrid(grid)
 
-	fmt.Println(normaldirection)
+	//Flip Grid Sideways
+	var sidewaysgrid []string
+	for n := 0; n < len(grid[0]); n++ {
+		var newrow []string
+		for m := 0; m < len(grid); m++ {
+			newrow = append(newrow, grid[m][n])
+		}
 
+		sidewaysgrid = append(sidewaysgrid, strings.Join(newrow, ""))
+
+	}
+	fmt.Println(sidewaysgrid)
+
+	// Cound XMAS In Each Direction:
+	answer1 += countxmas(normaldirection)
+	answer1 += countxmas(sidewaysgrid)
+
+	// Present Answer
 	fmt.Println("Finished 4A in", time.Since(starttime))
 	fmt.Printf("Part 1 Answer: %d\n", answer1)
 
