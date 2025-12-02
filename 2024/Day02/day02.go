@@ -72,7 +72,7 @@ func Run() {
 	starttime := time.Now()
 
 	// Read Input Into Lines
-	path := "Day02/puzzleinput.txt"
+	path := "2024/Day02/puzzleinput.txt"
 	lines := inputtolines(path)
 
 	// Process Line One at a Time

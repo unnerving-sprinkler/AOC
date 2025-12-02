@@ -41,7 +41,7 @@ func Run() {
 	starttime := time.Now()
 
 	// Open File Read To Stringgs
-	path := "Day01/puzzleinput.txt"
+	path := "2024/Day01/puzzleinput.txt"
 	lines := inputtolines(path)
 
 	// Create a Place To Store int values and seperate numbers from the string

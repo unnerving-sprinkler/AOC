@@ -51,7 +51,7 @@ func Run() {
 
 	var grid [][]string
 	// Read Input File
-	lines := inputtolines("Day04/puzzleinput.txt")
+	lines := inputtolines("2024/Day04/puzzleinput.txt")
 
 	for _, line := range lines { // Create a 2D Array From Input
 		grid = append(grid, strings.Split(line, ""))

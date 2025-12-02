@@ -1,10 +1,10 @@
 package main
 
 import (
-	day01 "aoc2024/Day01"
-	day02 "aoc2024/Day02"
-	day03 "aoc2024/Day03"
-	day04 "aoc2024/Day04"
+	day01 "github.com/unnerving-sprinkler/AOC/2024/Day01"
+	day02 "github.com/unnerving-sprinkler/AOC/2024/Day02"
+	day03 "github.com/unnerving-sprinkler/AOC/2024/Day03"
+	day04 "github.com/unnerving-sprinkler/AOC/2024/Day04"
 
 	"fmt"
 )

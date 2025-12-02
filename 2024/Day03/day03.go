@@ -34,7 +34,7 @@ func Run() {
 	answer1 := 0
 
 	// Read Input File
-	lines := inputtolines("Day03/puzzleinput.txt")
+	lines := inputtolines("2024/Day03/puzzleinput.txt")
 
 	// Find All Expressions That Match Format and Add a Array Of Strings
 	var matchingexpressions []string
