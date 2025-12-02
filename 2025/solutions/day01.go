@@ -11,7 +11,7 @@ func Run() {
 	// Setup Part 1
 	starttime := time.Now()
 	answer1 := 0
-	testtag := 0
+	answer2 := 0
 	dialpos := 50
 	fmt.Println("Starting 2025 Day 1 Part 1")
 
@@ -45,20 +45,28 @@ func Run() {
 			dialpos += inst.Distance
 		}
 
-		// Wrap Around
+		countzero := true
 
 		for dialpos > 99 {
+			countzero = false
+			answer2++
 			dialpos -= 100
 
 		}
 
 		for dialpos < 0 {
+			countzero = false
+			answer2++
 			dialpos += 100
 
 		}
 
 		if dialpos == 0 {
 			answer1++
+			if countzero {
+				//answer2++
+			}
+			fmt.Println(countzero)
 		}
 	}
 
@@ -66,12 +74,10 @@ func Run() {
 	fmt.Println("Finished Part 1 in", time.Since(starttime))
 	fmt.Printf("Part 1 Answer: %d\n", answer1)
 
-	fmt.Println(testtag)
 	////////////////////////////// Part 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 	// Setup Part 2
 	starttime = time.Now()
-	answer2 := 0
 	fmt.Println("\nStarting 2025 Day 1 Part 2")
 
 	// Close Part 2
